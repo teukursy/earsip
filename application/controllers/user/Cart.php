@@ -11,8 +11,21 @@ class Cart extends CI_Controller
         $this->load->library('session');
 	}
 
-    public function form_cart()
+    public function form_cart($paket)
 	{
+        if ($paket == "starter") {
+            $data["paket"] = "Starter";
+            $data["harga"] = 100000;
+        }
+        else if ($paket == "medium") {
+            $data["paket"] = "Medium";
+            $data["harga"] = 135000;
+        }
+        else if ($paket == "complete") {
+            $data["paket"] = "Complete";
+            $data["harga"] = 150000;
+        }
+
 		$data['produk'] = $this->Cart_model->get_produk_all();
 		$this->load->view('user/cart/vcart', $data);
 	}   

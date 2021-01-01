@@ -224,7 +224,7 @@
                                 </li>
                             </ul>
                             <div class="button-wrapper">
-                                <a class="btn-solid-reg page-scroll" href="<?php echo site_url ("user/Cart/form_cart" ) ?>">ORDER</a>
+                                <a class="btn-solid-reg page-scroll" href="<?php echo site_url ("user/Cart/form_cart/starter" ) ?>">ORDER</a>
                             </div>
                         </div>
                     </div> <!-- end of card -->
@@ -256,7 +256,7 @@
                                 </li>    
                             </ul>
                             <div class="button-wrapper">
-                                <a class="btn-solid-reg page-scroll" href="#request">ORDER</a>
+                                <a class="btn-solid-reg page-scroll" href="<?php echo site_url ("user/Cart/form_cart/medium" ) ?>">ORDER</a>
                             </div>
                         </div>
                     </div> <!-- end of card -->
@@ -291,7 +291,7 @@
                                 </li>
                             </ul>
                             <div class="button-wrapper">
-                                <a class="btn-solid-reg page-scroll" href="#request">ORDER</a>
+                                <a class="btn-solid-reg page-scroll" href="<?php echo site_url ("user/Cart/form_cart/complete" ) ?>">ORDER</a>
                             </div>
                         </div>
                     </div> <!-- end of card -->
