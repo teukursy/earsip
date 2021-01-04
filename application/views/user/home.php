@@ -27,7 +27,7 @@
                         <div class="text-container">
                             <h1><span class="turquoise"></span> Arsip Online</h1>
                             <p class="p-large">Gunakan Earsip untuk mempermudah dan mempercepat pengarsipan surat kantor anda</p>
-                            <a class="btn-solid-lg page-scroll" href="">DEMO APLIKASI  </a>
+                            <a class="btn-solid-lg page-scroll" href="<?php echo site_url('user/suratmasuk') ?>">DEMO APLIKASI  </a>
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
                     <div class="col-lg-6">
