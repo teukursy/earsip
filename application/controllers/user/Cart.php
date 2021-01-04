@@ -117,5 +117,26 @@ class Cart extends CI_Controller
         $data['produk'] = $this->keranjang_model->get_produk_all();
         $this->load->view('user/cart/sukses',$data);
     }
+    public function print($paket)
+    {
+        if ($paket == "Starter") {
+            $data["paket"] = "Starter";
+            $data["harga"] = 100000;
+        }
+        else if ($paket == "Medium") {
+            $data["paket"] = "Medium";
+            $data["harga"] = 135000;
+        }
+        else if ($paket == "Complete") {
+            $data["paket"] = "Complete";
+            $data["harga"] = 150000;
+        }
+        $this->load->model('Cart_model');
+        $data['produk'] = $this->Cart_model->get_produk_all();
+        $this->load->library('pdf');
+        $this->pdf->setPaper('A4', 'landscape');
+        $this->pdf->filename = "laporan-Cart-Order.pdf";
+        $this->pdf->load_view('user/print', $data);
+    }
 }
 
