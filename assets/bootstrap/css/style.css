@@ -1,0 +1,17 @@
+#page-top {
+    background-image: url('http://localhost/arsipdesa/assets/images/bg2.jpg');
+    background-size: cover;
+}
+
+#typography {
+    padding: 20px;
+}
+
+#typography-up {
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+#im-dashboard {
+    padding-left: 50px;
+}
