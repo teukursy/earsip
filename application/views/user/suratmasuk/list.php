@@ -58,8 +58,8 @@
 												<a href="<?php echo site_url("user/suratmasuk/lihat/" . $surat_masuk->berkasmasuk) ?>" class="btn btn-small"><i class="fas fa-print"></i> Lihat Berkas</a>
 											</td>
 											<td>
-												<a href="<?php echo site_url('user/suratmasuk/edit/' . $surat_masuk->nourut) ?>" class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
-												<a onclick="deleteConfirm('<?php echo site_url('user/suratmasuk/delete/' . $surat_masuk->nourut) ?>')" href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
+												<a href="#" data-toggle="modal" data-target="#logoutModal" class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
+												<a href="#" data-toggle="modal" data-target="#logoutModal" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
 											</td>
 										</tr>
 									<?php endforeach; ?>
