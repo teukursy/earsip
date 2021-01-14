@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+$this->load->model("Suratmasuk_model");
+$jml_suratmasuk = $this->Suratmasuk_model->total_rows(); ?>
 
 <head>
 	<?php $this->load->view("user/_partials/head_demo.php") ?>
@@ -33,8 +36,7 @@
 						<form action="<?php echo site_url('user/suratmasuk/add') ?>" method="post" enctype="multipart/form-data" >
 							<div class="form-group">
 								<label for="nourut">Nomor urut*</label>
-								<input class="form-control <?php echo form_error('nourut') ? 'is-invalid':'' ?>"
-								 type="text" name="nourut" placeholder="nomor urut saat ini" />
+								<input class="form-control <?php echo form_error('nourut') ? 'is-invalid':'' ?>"type="text" name="nourut" placeholder="nomor urut saat ini" value="<?php echo $jml_suratmasuk + 1 ?>" />
 								<div class="invalid-feedback">
 									<?php echo form_error('nourut') ?>
 								</div>

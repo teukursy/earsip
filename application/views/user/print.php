@@ -1,3 +1,9 @@
+<?php
+$this->load->model("Cart_model");
+$jml = $this->Cart_model->total_rows();
+?>
+<!DOCTYPE html>
+<html lang="en">
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +22,7 @@
 <body data-spy="scroll" data-target=".fixed-top">
 	<div class="container">
 		<table id="cart" class="table table-hover table-condensed">
+		
 			<thead>
 				<tr>
 					<th style="width:50%">Product</th>
@@ -30,12 +37,16 @@
 						<div class="row">
 							<div class="col-sm-2 hidden-xs"><img src="<?php echo base_url(); ?>images/paket1.jpg" alt="..." class="img-responsive" /></div>
 							<div class="col-sm-10">
-								<h4 class="nomargin"> Paket <?= $paket ?> </h4>
+								<h4 class="nomargin"> Paket <?= $paket_order ?> </h4>
 								<p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
+								<?php echo $nama_pelanggan ?> <br>
+								<?php echo $alamat ?> <br>
+								<?php echo $telp ?> <br>
+								<?php echo $email ?> <br>
 							</div>
 						</div>
 					</td>
-					<td data-th="Price"> Rp. <?= $harga ?> </td>
+					
 					<td data-th="Subtotal" class="text-center"> Rp. <?= $harga ?> </td>
 					<td class="actions" data-th="">
 						<button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
@@ -73,24 +84,5 @@
 	<!-- end of contact -->
 
 </body>
-<div align=right>
-<?php
-$tanggal = mktime(date('m'), date("d"), date('Y'));
-echo "Tanggal : <b> " . date("d-m-Y", $tanggal) . "</b>";
-date_default_timezone_set("Asia/Jakarta");
-$jam = date("H:i:s");
-echo " | Pukul : <b> " . $jam . " " . " </b> ";
-$a = date("H");
-if (($a >= 6) && ($a <= 11)) {
-	echo " <b>, Selamat Pagi !! </b>";
-} else if (($a >= 11) && ($a <= 15)) {
-	echo " , Selamat  Pagi !! ";
-} elseif (($a > 15) && ($a <= 18)) {
-	echo ", Selamat Siang !!";
-} else {
-	echo ", <b> Selamat Malam </b>";
-}
-?>
-</div>
 
 </html>

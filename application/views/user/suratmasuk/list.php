@@ -31,7 +31,6 @@
 							<table class="table table-hover" id="dataTable" width="100%" cellspacing="0" >
 								<thead>
 									<tr>
-										<th>NO</th>
 										<th>No. Berkas</th>
 										<th>Alamat Pengirim</th>
 										<th>Tanggal</th>
@@ -43,11 +42,8 @@
 								<tbody>
 									<?php foreach ($suratmasuk as $surat_masuk) : ?>
 										<tr>
-											<td width="50">
-												<?php echo $surat_masuk->nourut ?>
-											</td>
-											<td>
-												<?php echo $surat_masuk->noberkas ?>
+											<td width="150">
+											<?php echo $surat_masuk->noberkas ?>
 											</td>
 											<td>
 												<?php echo $surat_masuk->alamatpengirim ?>
